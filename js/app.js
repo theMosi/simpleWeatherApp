@@ -6,6 +6,16 @@ let wBtn = $.querySelector('#w-change-btn');
 let sName = $.querySelector('#state');
 let cName = $.querySelector('#city');
 
+let tempElem = $.querySelector('#w-temp');
+let maxTempElem = $.querySelector('#w-temp_max');
+let minTempElem = $.querySelector('#w-temp_min');
+
+let pressureElem = $.querySelector('#w-pressure');
+let humidityElem = $.querySelector('#w-humidity');
+let windElem = $.querySelector('#w-wind_speed');
+let lonElem = $.querySelector('#w-lon');
+let letElem = $.querySelector('#w-lat');
+
 let getWeather = async () => {
 
 
