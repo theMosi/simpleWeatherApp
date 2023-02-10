@@ -65,6 +65,7 @@ let setDOMFunc = async () => {
     $('#locationModal').modal('hide');
 
     setLocal(cNameValue);
+    cName.value = '';
 }
 
 
