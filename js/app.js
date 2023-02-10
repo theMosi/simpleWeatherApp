@@ -1,21 +1,20 @@
 console.log('Naya Injoor JaHa');
-let $ = document;
-let father = $.querySelector('body');
+let father = document.querySelector('body');
 
-let wBtn = $.querySelector('#w-change-btn');
-let cName = $.querySelector('#city');
+let wBtn = document.querySelector('#w-change-btn');
+let cName = document.querySelector('#city');
 
-let locationElem = $.querySelector('#w-location');
-let wMainElem = $.querySelector('#w-main');
-let iconElem = $.querySelector('#w-icon');
-let tempElem = $.querySelector('#w-temp');
-let maxTempElem = $.querySelector('#w-temp_max');
-let minTempElem = $.querySelector('#w-temp_min');
-let pressureElem = $.querySelector('#w-pressure');
-let humidityElem = $.querySelector('#w-humidity');
-let windElem = $.querySelector('#w-wind_speed');
-let lonElem = $.querySelector('#w-lon');
-let latElem = $.querySelector('#w-lat');
+let locationElem = document.querySelector('#w-location');
+let wMainElem = document.querySelector('#w-main');
+let iconElem = document.querySelector('#w-icon');
+let tempElem = document.querySelector('#w-temp');
+let maxTempElem = document.querySelector('#w-temp_max');
+let minTempElem = document.querySelector('#w-temp_min');
+let pressureElem = document.querySelector('#w-pressure');
+let humidityElem = document.querySelector('#w-humidity');
+let windElem = document.querySelector('#w-wind_speed');
+let lonElem = document.querySelector('#w-lon');
+let latElem = document.querySelector('#w-lat');
 
 
 let getWeather = async () => {
@@ -38,6 +37,7 @@ let getWeather = async () => {
     lonElem.innerHTML = wDataParse.coord.lon;
     latElem.innerHTML = wDataParse.coord.lat;
 
+    $('#locationModal').modal('hide');
 
     console.log(wDataParse)
 
