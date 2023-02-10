@@ -5,6 +5,8 @@ let father = $.querySelector('body');
 let wBtn = $.querySelector('#w-change-btn');
 let cName = $.querySelector('#city');
 
+let locationElem = $.querySelector('#w-location');
+let wMainElem = $.querySelector('#w-main');
 let iconElem = $.querySelector('#w-icon');
 let tempElem = $.querySelector('#w-temp');
 let maxTempElem = $.querySelector('#w-temp_max');
@@ -24,6 +26,9 @@ let getWeather = async () => {
     let wData = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cNameValue}&appid=281491e8a066d857590e3ef0c1b0a679`);
     let wDataParse = await wData.json();
 
+    locationElem.innerHTML = cNameValue;
+    wMainElem.innerHTML = wDataParse.weather[0].main;
+    iconElem.setAttribute('src', `http://openweathermap.org/img/wn/${wDataParse.weather[0].icon}@2x.png`)
     tempElem.innerHTML = wDataParse.main.temp;
     maxTempElem.innerHTML = wDataParse.main.temp_max;
     minTempElem.innerHTML = wDataParse.main.temp_min;
