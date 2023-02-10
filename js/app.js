@@ -3,7 +3,6 @@ let $ = document;
 let father = $.querySelector('body');
 
 let wBtn = $.querySelector('#w-change-btn');
-let sName = $.querySelector('#state');
 let cName = $.querySelector('#city');
 
 let iconElem = $.querySelector('#w-icon');
@@ -19,8 +18,6 @@ let latElem = $.querySelector('#w-lat');
 
 let getWeather = async () => {
 
-
-    let sNameValue = sName.value;
     let cNameValue = cName.value;
 
 
